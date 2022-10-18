@@ -1,0 +1,141 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+nifi-scripting-nar
+
+
+From: 'an unknown organization'
+  - Caffeine cache (https://github.com/ben-manes/caffeine) com.github.ben-manes.caffeine:caffeine:jar:2.8.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - javaparser-core (https://github.com/javaparser/javaparser-core) com.github.javaparser:javaparser-core:jar:3.18.0
+    License: GNU Lesser General Public License  (http://www.gnu.org/licenses/lgpl-3.0.html)    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - error-prone annotations (http://nexus.sonatype.org/oss-repository-hosting.html/error_prone_parent/error_prone_annotations) com.google.errorprone:error_prone_annotations:jar:2.3.4
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - QDox (http://qdox.codehaus.org) com.thoughtworks.qdox:qdox:jar:1.12.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - picocli - a mighty tiny Command Line Interface (http://picocli.info) info.picocli:picocli:jar:4.5.2
+    License: The Apache Software License, version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Metrics Core (https://metrics.dropwizard.io/metrics-core) io.dropwizard.metrics:metrics-core:bundle:4.1.2
+    License: Apache License 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+  - JVM Integration for Metrics (https://metrics.dropwizard.io/metrics-jvm) io.dropwizard.metrics:metrics-jvm:bundle:4.1.2
+    License: Apache License 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+  - JLine (http://nexus.sonatype.org/oss-repository-hosting.html/jline) jline:jline:jar:2.14.6
+    License: The BSD License  (http://www.opensource.org/licenses/bsd-license.php)
+  - Checker Qual (https://checkerframework.org) org.checkerframework:checker-qual:jar:3.1.0
+    License: The MIT License  (http://opensource.org/licenses/MIT)
+  - clojure (http://clojure.org/) org.clojure:clojure:jar:1.10.1
+    License: Eclipse Public License 1.0  (http://opensource.org/licenses/eclipse-1.0.php)
+  - core.specs.alpha (https://github.com/clojure/build.poms/core.specs.alpha) org.clojure:core.specs.alpha:jar:0.2.44
+    License: Eclipse Public License 1.0  (http://opensource.org/licenses/eclipse-1.0.php)
+  - spec.alpha (https://github.com/clojure/build.poms/spec.alpha) org.clojure:spec.alpha:jar:0.2.176
+    License: Eclipse Public License 1.0  (http://opensource.org/licenses/eclipse-1.0.php)
+  - luaj-jse (http://sourceforge.net/projects/luaj/) org.luaj:luaj-jse:jar:3.0.1
+    License: MIT License  (http://luaj.sourceforge.net/license.txt)
+  - Jython (https://www.jython.org/) org.python:jython-standalone:jar:2.7.2
+    License: Jython Software License  (https://www.jython.org/Project/license.html)
+  - Xerces2-j (https://xerces.apache.org/xerces2-j/) xerces:xercesImpl:jar:2.12.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - XML Commons External Components XML APIs (http://xml.apache.org/commons/components/external/) xml-apis:xml-apis:jar:1.4.01
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)    License: The SAX License  (http://www.saxproject.org/copying.html)    License: The W3C License  (http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/java-binding.zip)
+
+From: 'ANTLR' (http://www.antlr.org)
+  - ANTLR 3 Runtime (http://www.antlr.org) org.antlr:antlr-runtime:jar:3.5.2
+    License: BSD licence  (http://antlr.org/license.html)
+
+From: 'Apache NiFi Project' (https://nifi.apache.org/)
+  - nifi-metrics (https://nifi.apache.org/nifi-commons/nifi-metrics) org.apache.nifi:nifi-metrics:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-record-path (https://nifi.apache.org/nifi-commons/nifi-record-path) org.apache.nifi:nifi-record-path:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-rules-engine-service-api (https://nifi.apache.org/nifi-nar-bundles/nifi-standard-services/nifi-rules-engine-service-api) org.apache.nifi:nifi-rules-engine-service-api:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-scripting-processors (https://nifi.apache.org/nifi-nar-bundles/nifi-scripting-bundle/nifi-scripting-processors) org.apache.nifi:nifi-scripting-processors:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-standard-services-api-nar (https://nifi.apache.org/nifi-nar-bundles/nifi-standard-services/nifi-standard-services-api-nar) org.apache.nifi:nifi-standard-services-api-nar:nar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-utils (https://nifi.apache.org/nifi-commons/nifi-utils) org.apache.nifi:nifi-utils:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-uuid5 (https://nifi.apache.org/nifi-commons/nifi-uuid5) org.apache.nifi:nifi-uuid5:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'Apache Software Foundation' (https://apache.org)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy:jar:3.0.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-all:pom:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-ant:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-astbuilder:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-cli-picocli:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-console:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-datetime:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-dateutil:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-docgenerator:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-groovydoc:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-groovysh:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-jmx:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-json:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-jsr223:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-macro:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-nio:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-servlet:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-sql:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-swing:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-templates:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Groovy (https://groovy-lang.org) org.codehaus.groovy:groovy-xml:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'FasterXML' (http://fasterxml.com/)
+  - Jackson-annotations (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-annotations:bundle:2.13.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-core (https://github.com/FasterXML/jackson-core) com.fasterxml.jackson.core:jackson-core:bundle:2.13.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - jackson-databind (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-databind:bundle:2.13.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'JRuby' (https://www.jruby.org)
+  - JRuby Complete (https://github.com/jruby/jruby/jruby-artifacts/jruby-complete) org.jruby:jruby-complete:bundle:9.3.4.0
+    License: GPL-2.0  (http://www.gnu.org/licenses/gpl-2.0-standalone.html)    License: LGPL-2.1  (http://www.gnu.org/licenses/lgpl-2.1-standalone.html)    License: EPL-2.0  (http://www.eclipse.org/legal/epl-v20.html)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Apache Ivy (http://ant.apache.org/ivy/) org.apache.ivy:ivy:jar:2.5.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Apache Software Foundation' (https://www.apache.org/)
+  - Apache Commons Codec (https://commons.apache.org/proper/commons-codec/) commons-codec:commons-codec:jar:1.15
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons IO (https://commons.apache.org/proper/commons-io/) commons-io:commons-io:jar:2.11.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Net (http://commons.apache.org/proper/commons-net/) commons-net:commons-net:jar:3.6
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Ant Core (https://ant.apache.org/) org.apache.ant:ant:jar:1.10.12
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Ant + ANTLR (https://ant.apache.org/) org.apache.ant:ant-antlr:jar:1.10.12
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Ant Launcher (https://ant.apache.org/) org.apache.ant:ant-launcher:jar:1.10.12
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Lang (https://commons.apache.org/proper/commons-lang/) org.apache.commons:commons-lang3:jar:3.12.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

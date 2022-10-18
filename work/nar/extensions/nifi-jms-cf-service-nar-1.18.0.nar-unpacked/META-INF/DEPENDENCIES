@@ -1,0 +1,21 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+nifi-jms-cf-service-nar
+
+
+From: 'an unknown organization'
+  - JMS API (http://java.net/projects/jms-spec/pages/Home) javax.jms:javax.jms-api:jar:2.0.1
+    License: CDDL + GPLv2 with classpath exception  (https://glassfish.java.net/nonav/public/CDDL+GPL_1_1.html)
+
+From: 'Apache NiFi Project' (https://nifi.apache.org/)
+  - nifi-jms-cf-service (https://nifi.apache.org/nifi-nar-bundles/nifi-jms-bundle/nifi-jms-cf-service) org.apache.nifi:nifi-jms-cf-service:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-standard-services-api-nar (https://nifi.apache.org/nifi-nar-bundles/nifi-standard-services/nifi-standard-services-api-nar) org.apache.nifi:nifi-standard-services-api-nar:nar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+
+
+

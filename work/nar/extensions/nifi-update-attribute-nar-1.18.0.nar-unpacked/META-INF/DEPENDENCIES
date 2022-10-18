@@ -1,0 +1,37 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+nifi-update-attribute-nar
+
+
+From: 'an unknown organization'
+  - Caffeine cache (https://github.com/ben-manes/caffeine) com.github.ben-manes.caffeine:caffeine:jar:2.8.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - error-prone annotations (http://nexus.sonatype.org/oss-repository-hosting.html/error_prone_parent/error_prone_annotations) com.google.errorprone:error_prone_annotations:jar:2.3.4
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Checker Qual (https://checkerframework.org) org.checkerframework:checker-qual:jar:3.1.0
+    License: The MIT License  (http://opensource.org/licenses/MIT)
+
+From: 'Apache NiFi Project' (https://nifi.apache.org/)
+  - nifi-jetty-bundle (https://nifi.apache.org/nifi-nar-bundles/nifi-jetty-bundle) org.apache.nifi:nifi-jetty-bundle:nar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-update-attribute-model (https://nifi.apache.org/nifi-nar-bundles/nifi-update-attribute-bundle/nifi-update-attribute-model) org.apache.nifi:nifi-update-attribute-model:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-update-attribute-processor (https://nifi.apache.org/nifi-nar-bundles/nifi-update-attribute-bundle/nifi-update-attribute-processor) org.apache.nifi:nifi-update-attribute-processor:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-update-attribute-ui (https://nifi.apache.org/nifi-nar-bundles/nifi-update-attribute-bundle/nifi-update-attribute-ui) org.apache.nifi:nifi-update-attribute-ui:war:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-utils (https://nifi.apache.org/nifi-commons/nifi-utils) org.apache.nifi:nifi-utils:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-xml-processing (https://nifi.apache.org/nifi-commons/nifi-xml-processing) org.apache.nifi:nifi-xml-processing:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'The Apache Software Foundation' (https://www.apache.org/)
+  - Apache Commons Lang (https://commons.apache.org/proper/commons-lang/) org.apache.commons:commons-lang3:jar:3.12.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

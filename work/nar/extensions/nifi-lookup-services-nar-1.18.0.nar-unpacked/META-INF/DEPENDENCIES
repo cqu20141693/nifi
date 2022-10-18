@@ -1,0 +1,121 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+nifi-lookup-services-nar
+
+
+From: 'an unknown organization'
+  - Caffeine cache (https://github.com/ben-manes/caffeine) com.github.ben-manes.caffeine:caffeine:jar:2.8.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - error-prone annotations (http://nexus.sonatype.org/oss-repository-hosting.html/error_prone_parent/error_prone_annotations) com.google.errorprone:error_prone_annotations:jar:2.3.4
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - project ':json-path' (https://github.com/jayway/JsonPath) com.jayway.jsonpath:json-path:jar:2.6.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - okhttp (https://square.github.io/okhttp/) com.squareup.okhttp3:okhttp:jar:4.10.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - okio (https://github.com/square/okio/) com.squareup.okio:okio-jvm:jar:3.0.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - okhttp-digest (https://github.com/rburgst/okhttp-digest) io.github.rburgst:okhttp-digest:jar:2.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Checker Qual (https://checkerframework.org) org.checkerframework:checker-qual:jar:3.1.0
+    License: The MIT License  (http://opensource.org/licenses/MIT)
+  - IntelliJ IDEA Annotations (http://www.jetbrains.org) org.jetbrains:annotations:jar:13.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Kotlin Stdlib (https://kotlinlang.org/) org.jetbrains.kotlin:kotlin-stdlib:jar:1.7.10
+    License: The Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Kotlin Stdlib Common (https://kotlinlang.org/) org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.7.10
+    License: The Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Kotlin Stdlib Jdk7 (https://kotlinlang.org/) org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.7.10
+    License: The Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Kotlin Stdlib Jdk8 (https://kotlinlang.org/) org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.7.10
+    License: The Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'ANTLR' (http://www.antlr.org)
+  - ANTLR 3 Runtime (http://www.antlr.org) org.antlr:antlr-runtime:jar:3.5.2
+    License: BSD licence  (http://antlr.org/license.html)
+
+From: 'Apache NiFi Project' (https://nifi.apache.org/)
+  - nifi-avro-record-utils (https://nifi.apache.org/nifi-nar-bundles/nifi-extension-utils/nifi-record-utils/nifi-avro-record-utils) org.apache.nifi:nifi-avro-record-utils:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-database-utils (https://nifi.apache.org/nifi-nar-bundles/nifi-extension-utils/nifi-database-utils) org.apache.nifi:nifi-database-utils:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-dbcp-service-api (https://nifi.apache.org/nifi-nar-bundles/nifi-standard-services/nifi-dbcp-service-api) org.apache.nifi:nifi-dbcp-service-api:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-expression-language (https://nifi.apache.org/nifi-commons/nifi-expression-language) org.apache.nifi:nifi-expression-language:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-lookup-services (https://nifi.apache.org/nifi-nar-bundles/nifi-standard-services/nifi-lookup-services-bundle/nifi-lookup-services) org.apache.nifi:nifi-lookup-services:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-parameter (https://nifi.apache.org/nifi-commons/nifi-parameter) org.apache.nifi:nifi-parameter:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-proxy-configuration-api (https://nifi.apache.org/nifi-nar-bundles/nifi-standard-services/nifi-proxy-configuration-api) org.apache.nifi:nifi-proxy-configuration-api:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-record-path (https://nifi.apache.org/nifi-commons/nifi-record-path) org.apache.nifi:nifi-record-path:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-security-socket-ssl (https://nifi.apache.org/nifi-commons/nifi-security-socket-ssl) org.apache.nifi:nifi-security-socket-ssl:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-standard-record-utils (https://nifi.apache.org/nifi-nar-bundles/nifi-extension-utils/nifi-record-utils/nifi-standard-record-utils) org.apache.nifi:nifi-standard-record-utils:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-standard-services-api-nar (https://nifi.apache.org/nifi-nar-bundles/nifi-standard-services/nifi-standard-services-api-nar) org.apache.nifi:nifi-standard-services-api-nar:nar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-utils (https://nifi.apache.org/nifi-commons/nifi-utils) org.apache.nifi:nifi-utils:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-uuid5 (https://nifi.apache.org/nifi-commons/nifi-uuid5) org.apache.nifi:nifi-uuid5:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'Chemouni Uriel' (https://urielch.github.io/)
+  - ASM based accessors helper used by json-smart (https://urielch.github.io/) net.minidev:accessors-smart:bundle:2.4.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JSON Small and Fast Parser (https://urielch.github.io/) net.minidev:json-smart:bundle:2.4.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'FasterXML' (http://fasterxml.com/)
+  - Jackson-annotations (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-annotations:bundle:2.13.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-core (https://github.com/FasterXML/jackson-core) com.fasterxml.jackson.core:jackson-core:bundle:2.13.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - jackson-databind (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-databind:bundle:2.13.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'MaxMind, Inc.' (http://www.maxmind.com/)
+  - MaxMind DB Reader (http://dev.maxmind.com/) com.maxmind.db:maxmind-db:jar:2.0.0
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - MaxMind GeoIP2 API (https://dev.maxmind.com/geoip?lang=en) com.maxmind.geoip2:geoip2:jar:2.16.1
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+
+From: 'OW2' (http://www.ow2.org/)
+  - asm (http://asm.ow2.io/) org.ow2.asm:asm:jar:9.1
+    License: BSD-3-Clause  (https://asm.ow2.io/license.html)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Apache Commons Collections (http://commons.apache.org/collections/) commons-collections:commons-collections:jar:3.2.2
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache HttpClient (http://hc.apache.org/httpcomponents-client) org.apache.httpcomponents:httpclient:jar:4.5.13
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache HttpCore (http://hc.apache.org/httpcomponents-core-ga) org.apache.httpcomponents:httpcore:jar:4.4.15
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Apache Software Foundation' (https://www.apache.org/)
+  - Apache Commons BeanUtils (https://commons.apache.org/proper/commons-beanutils/) commons-beanutils:commons-beanutils:jar:1.9.4
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Codec (https://commons.apache.org/proper/commons-codec/) commons-codec:commons-codec:jar:1.15
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons IO (https://commons.apache.org/proper/commons-io/) commons-io:commons-io:jar:2.11.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Avro (https://avro.apache.org) org.apache.avro:avro:bundle:1.11.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Compress (https://commons.apache.org/proper/commons-compress/) org.apache.commons:commons-compress:jar:1.21
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Configuration (https://commons.apache.org/proper/commons-configuration/) org.apache.commons:commons-configuration2:jar:2.8.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons CSV (https://commons.apache.org/proper/commons-csv/) org.apache.commons:commons-csv:jar:1.8
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Lang (https://commons.apache.org/proper/commons-lang/) org.apache.commons:commons-lang3:jar:3.12.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Text (https://commons.apache.org/proper/commons-text) org.apache.commons:commons-text:jar:1.8
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

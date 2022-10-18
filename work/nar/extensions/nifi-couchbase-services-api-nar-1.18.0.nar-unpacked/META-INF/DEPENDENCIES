@@ -1,0 +1,27 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+nifi-couchbase-services-api-nar
+
+
+From: 'an unknown organization'
+  - rxjava (https://github.com/ReactiveX/RxJava) io.reactivex:rxjava:jar:1.3.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Apache NiFi Project' (https://nifi.apache.org/)
+  - nifi-couchbase-services-api (https://nifi.apache.org/nifi-nar-bundles/nifi-couchbase-bundle/nifi-couchbase-services-api) org.apache.nifi:nifi-couchbase-services-api:jar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-standard-services-api-nar (https://nifi.apache.org/nifi-nar-bundles/nifi-standard-services/nifi-standard-services-api-nar) org.apache.nifi:nifi-standard-services-api-nar:nar:1.18.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'Couchbase, Inc.' (http://couchbase.com)
+  - Couchbase JVM Core IO (http://couchbase.com) com.couchbase.client:core-io:jar:1.5.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Couchbase Java SDK (http://couchbase.com) com.couchbase.client:java-client:jar:2.5.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+
