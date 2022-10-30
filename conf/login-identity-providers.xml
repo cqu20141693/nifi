@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<loginIdentityProviders>
+
+    <provider>
+        <identifier>guc-provider</identifier>
+        <class>com.wcc.nifi.GucUserProvider</class>
+    </provider>
+    <provider>
+        <identifier>single-user-provider</identifier>
+        <class>org.apache.nifi.authentication.single.user.SingleUserLoginIdentityProvider</class>
+        <property name="Username">f281eff5-cb76-4ccc-b00e-c4a0ec9cc360</property>
+        <property name="Password">$2b$12$AfRG5XQFXQHBFfitn3fhoO86BTz5TshANNT0xhl/8i.JHZRjsDCtq</property>
+    </provider>
+</loginIdentityProviders>
