@@ -353,6 +353,12 @@ language governing permissions and limitations under the License. -->
             <type>nar</type>
         </dependency>
         <dependency>
+            <groupId>com.wcc.nifi</groupId>
+            <artifactId>nifi-guc-iaa-providers-nar</artifactId>
+            <version>1.18.0</version>
+            <type>nar</type>
+        </dependency>
+        <dependency>
             <groupId>org.apache.nifi</groupId>
             <artifactId>nifi-dbcp-service-nar</artifactId>
             <version>1.18.0</version>

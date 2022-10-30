@@ -50,15 +50,7 @@ import org.apache.nifi.web.IllegalClusterResourceRequestException;
 import org.apache.nifi.web.NiFiServiceFacade;
 import org.apache.nifi.web.ResourceNotFoundException;
 import org.apache.nifi.web.Revision;
-import org.apache.nifi.web.api.dto.AboutDTO;
-import org.apache.nifi.web.api.dto.BannerDTO;
-import org.apache.nifi.web.api.dto.BulletinBoardDTO;
-import org.apache.nifi.web.api.dto.BulletinQueryDTO;
-import org.apache.nifi.web.api.dto.ClusterDTO;
-import org.apache.nifi.web.api.dto.ClusterSummaryDTO;
-import org.apache.nifi.web.api.dto.NodeDTO;
-import org.apache.nifi.web.api.dto.ProcessGroupDTO;
-import org.apache.nifi.web.api.dto.RevisionDTO;
+import org.apache.nifi.web.api.dto.*;
 import org.apache.nifi.web.api.dto.action.HistoryDTO;
 import org.apache.nifi.web.api.dto.action.HistoryQueryDTO;
 import org.apache.nifi.web.api.dto.flow.FlowDTO;
@@ -66,54 +58,7 @@ import org.apache.nifi.web.api.dto.flow.ProcessGroupFlowDTO;
 import org.apache.nifi.web.api.dto.search.NodeSearchResultDTO;
 import org.apache.nifi.web.api.dto.search.SearchResultsDTO;
 import org.apache.nifi.web.api.dto.status.ControllerStatusDTO;
-import org.apache.nifi.web.api.entity.AboutEntity;
-import org.apache.nifi.web.api.entity.ActionEntity;
-import org.apache.nifi.web.api.entity.ActivateControllerServicesEntity;
-import org.apache.nifi.web.api.entity.BannerEntity;
-import org.apache.nifi.web.api.entity.FlowRegistryBucketEntity;
-import org.apache.nifi.web.api.entity.FlowRegistryBucketsEntity;
-import org.apache.nifi.web.api.entity.BulletinBoardEntity;
-import org.apache.nifi.web.api.entity.ClusteSummaryEntity;
-import org.apache.nifi.web.api.entity.ClusterSearchResultsEntity;
-import org.apache.nifi.web.api.entity.ComponentHistoryEntity;
-import org.apache.nifi.web.api.entity.ConnectionStatisticsEntity;
-import org.apache.nifi.web.api.entity.ConnectionStatusEntity;
-import org.apache.nifi.web.api.entity.ControllerBulletinsEntity;
-import org.apache.nifi.web.api.entity.ControllerServiceEntity;
-import org.apache.nifi.web.api.entity.ControllerServiceTypesEntity;
-import org.apache.nifi.web.api.entity.ControllerServicesEntity;
-import org.apache.nifi.web.api.entity.ControllerStatusEntity;
-import org.apache.nifi.web.api.entity.CurrentUserEntity;
-import org.apache.nifi.web.api.entity.FlowConfigurationEntity;
-import org.apache.nifi.web.api.entity.FlowRegistryClientEntity;
-import org.apache.nifi.web.api.entity.FlowRegistryClientsEntity;
-import org.apache.nifi.web.api.entity.HistoryEntity;
-import org.apache.nifi.web.api.entity.ParameterContextEntity;
-import org.apache.nifi.web.api.entity.ParameterContextsEntity;
-import org.apache.nifi.web.api.entity.ParameterProviderEntity;
-import org.apache.nifi.web.api.entity.ParameterProviderTypesEntity;
-import org.apache.nifi.web.api.entity.ParameterProvidersEntity;
-import org.apache.nifi.web.api.entity.PortStatusEntity;
-import org.apache.nifi.web.api.entity.PrioritizerTypesEntity;
-import org.apache.nifi.web.api.entity.ProcessGroupEntity;
-import org.apache.nifi.web.api.entity.ProcessGroupFlowEntity;
-import org.apache.nifi.web.api.entity.ProcessGroupStatusEntity;
-import org.apache.nifi.web.api.entity.ProcessorStatusEntity;
-import org.apache.nifi.web.api.entity.ProcessorTypesEntity;
-import org.apache.nifi.web.api.entity.RemoteProcessGroupStatusEntity;
-import org.apache.nifi.web.api.entity.ReportingTaskEntity;
-import org.apache.nifi.web.api.entity.ReportingTaskTypesEntity;
-import org.apache.nifi.web.api.entity.ReportingTasksEntity;
-import org.apache.nifi.web.api.entity.RuntimeManifestEntity;
-import org.apache.nifi.web.api.entity.ScheduleComponentsEntity;
-import org.apache.nifi.web.api.entity.SearchResultsEntity;
-import org.apache.nifi.web.api.entity.StatusHistoryEntity;
-import org.apache.nifi.web.api.entity.TemplateEntity;
-import org.apache.nifi.web.api.entity.TemplatesEntity;
-import org.apache.nifi.web.api.entity.VersionedFlowEntity;
-import org.apache.nifi.web.api.entity.VersionedFlowSnapshotMetadataEntity;
-import org.apache.nifi.web.api.entity.VersionedFlowSnapshotMetadataSetEntity;
-import org.apache.nifi.web.api.entity.VersionedFlowsEntity;
+import org.apache.nifi.web.api.entity.*;
 import org.apache.nifi.web.api.metrics.JsonFormatPrometheusMetricsWriter;
 import org.apache.nifi.web.api.metrics.PrometheusMetricsWriter;
 import org.apache.nifi.web.api.metrics.TextFormatPrometheusMetricsWriter;
@@ -387,9 +332,134 @@ public class FlowResource extends ApplicationResource {
         // get this process group flow
         final ProcessGroupFlowEntity entity = serviceFacade.getProcessGroupFlow(groupId, uiOnly);
         populateRemainingFlowContent(entity.getProcessGroupFlow());
+
+        //flowFilter(entity);
+
         return generateOkResponse(entity).build();
     }
 
+    private void flowFilter(ProcessGroupFlowEntity entity) {
+        Set<ProcessGroupEntity> processGroups = entity.getProcessGroupFlow().getFlow().getProcessGroups();
+        Set<ProcessGroupEntity> deletes = new HashSet<>();
+        for (ProcessGroupEntity processGroup : processGroups) {
+            PermissionsDTO permissions = processGroup.getPermissions();
+            if(!permissions.getCanRead()){
+                deletes.add(processGroup);
+            }
+        }
+        if(deletes.size() > 0){
+            processGroups.removeAll(deletes);
+        }
+
+
+        tenantFilter(entity);
+    }
+
+    private void tenantFilter(ProcessGroupFlowEntity entity) {
+        // 过滤processors
+        Set<ProcessorEntity> processors = entity.getProcessGroupFlow().getFlow().getProcessors();
+        Set<ProcessorEntity> deleteProcessors = new HashSet<>();
+        for (ProcessorEntity processor : processors) {
+            PermissionsDTO permissions = processor.getPermissions();
+            if(!permissions.getCanRead()){
+                deleteProcessors.add(processor);
+            }
+        }
+        if(deleteProcessors.size() > 0){
+            processors.removeAll(deleteProcessors);
+        }
+
+        // 过滤processGroups
+        Set<ProcessGroupEntity> processGroups = entity.getProcessGroupFlow().getFlow().getProcessGroups();
+        Set<ProcessGroupEntity> deleteProcessGroups = new HashSet<>();
+        for (ProcessGroupEntity group : processGroups) {
+            PermissionsDTO permissions = group.getPermissions();
+            if(!permissions.getCanRead()){
+                deleteProcessGroups.add(group);
+            }
+        }
+        if(deleteProcessGroups.size() > 0){
+            processGroups.removeAll(deleteProcessGroups);
+        }
+
+        // 过滤labels
+        Set<LabelEntity> labels = entity.getProcessGroupFlow().getFlow().getLabels();
+        Set<LabelEntity> deleteLabels = new HashSet<>();
+        for (LabelEntity label : labels) {
+            PermissionsDTO permissions = label.getPermissions();
+            if(!permissions.getCanRead()){
+                deleteLabels.add(label);
+            }
+        }
+        if(deleteLabels.size() > 0){
+            labels.removeAll(deleteLabels);
+        }
+
+        // 过滤remoteProcessGroups
+        Set<RemoteProcessGroupEntity> remoteProcessGroups = entity.getProcessGroupFlow().getFlow().getRemoteProcessGroups();
+        Set<RemoteProcessGroupEntity> deleteRemoteProcessGroups = new HashSet<>();
+        for (RemoteProcessGroupEntity remoteProcessGroup : remoteProcessGroups) {
+            PermissionsDTO permissions = remoteProcessGroup.getPermissions();
+            if(!permissions.getCanRead()){
+                deleteRemoteProcessGroups.add(remoteProcessGroup);
+            }
+        }
+        if(deleteRemoteProcessGroups.size() > 0){
+            remoteProcessGroups.removeAll(deleteRemoteProcessGroups);
+        }
+
+        // 过滤inputPorts
+        Set<PortEntity> inputPorts = entity.getProcessGroupFlow().getFlow().getInputPorts();
+        Set<PortEntity> deleteInputPorts = new HashSet<>();
+        for (PortEntity in : inputPorts) {
+            PermissionsDTO permissions = in.getPermissions();
+            if(!permissions.getCanRead()){
+                deleteInputPorts.add(in);
+            }
+        }
+        if(deleteInputPorts.size() > 0){
+            inputPorts.removeAll(deleteInputPorts);
+        }
+
+        // 过滤outputPorts
+        Set<PortEntity> outputPorts = entity.getProcessGroupFlow().getFlow().getOutputPorts();
+        Set<PortEntity> deleteOutputPorts = new HashSet<>();
+        for (PortEntity out : outputPorts) {
+            PermissionsDTO permissions = out.getPermissions();
+            if(!permissions.getCanRead()){
+                deleteOutputPorts.add(out);
+            }
+        }
+        if(deleteOutputPorts.size() > 0){
+            outputPorts.removeAll(deleteOutputPorts);
+        }
+
+        // 过滤funnels
+        Set<FunnelEntity> funnels = entity.getProcessGroupFlow().getFlow().getFunnels();
+        Set<FunnelEntity> deleteFunnels = new HashSet<>();
+        for (FunnelEntity funnel : funnels) {
+            PermissionsDTO permissions = funnel.getPermissions();
+            if(!permissions.getCanRead()){
+                deleteFunnels.add(funnel);
+            }
+        }
+        if(deleteFunnels.size() > 0){
+            funnels.removeAll(deleteFunnels);
+        }
+
+        // 过滤connections
+        Set<ConnectionEntity> connections = entity.getProcessGroupFlow().getFlow().getConnections();
+        Set<ConnectionEntity> deleteConnections = new HashSet<>();
+        for (ConnectionEntity conn : connections) {
+            PermissionsDTO permissions = conn.getPermissions();
+            if(!permissions.getCanRead()){
+                deleteConnections.add(conn);
+            }
+        }
+        if(deleteConnections.size() > 0){
+            connections.removeAll(deleteConnections);
+        }
+    }
     /**
      * Retrieves the metrics of the entire flow.
      *

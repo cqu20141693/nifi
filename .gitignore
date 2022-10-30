@@ -13,10 +13,17 @@ nb-configuration.xml
 *.iml
 *.iws
 *.ipr
-conf/
-bin/
-docs/
 lib/
+work/
 *~
 
 .vscode/
+/content_repository/
+/database_repository/
+/extensions/
+/flowfile_repository/
+/logs/
+/provenance_repository/
+/run/
+/state/
+/.github/
